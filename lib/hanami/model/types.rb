@@ -23,7 +23,7 @@ module Hanami
         # @since 0.7.0
         def Collection(type) # rubocop:disable Naming/MethodName
           type = Schema::CoercibleType.new(type) unless type.is_a?(Dry::Types::Definition)
-          Types::Array.member(type)
+          Types::Array.of(type)
         end
       end
 
